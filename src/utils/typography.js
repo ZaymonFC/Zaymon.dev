@@ -9,13 +9,13 @@ import OceanBeach from 'typography-theme-ocean-beach'
 //   }
 // }
 
-OceanBeach.baseFontSize = '18.5px'
+OceanBeach.baseFontSize = '17px'
 OceanBeach.baseLineHeight = '1.58'
 OceanBeach.boldWeight = '600'
 OceanBeach.bodyColour = 'FFFFFF'
-OceanBeach.bodyFontFamily = ['Open Sans']
+OceanBeach.bodyFontFamily = ['Fira Sans']
 
-delete OceanBeach.googleFonts
+// delete OceanBeach.googleFonts
 
 const typography = new Typography(OceanBeach)
 

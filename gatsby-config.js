@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `0xZafc.Net`,
+    title: `Zaymon.dev`,
     author: `Zaymon Foulds-Cook`,
     description: `Personal Blog`,
     siteUrl: `https://0xZafc.net/`,
@@ -61,7 +61,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#2b3a47`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

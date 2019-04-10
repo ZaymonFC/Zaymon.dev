@@ -9,7 +9,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
+import "./bio.css"
 
 function Bio() {
   return (
@@ -18,31 +18,20 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div
-            style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
-            }}
-          >
+          <div className="bio">
             <Image
               fixed={data.avatar.childImageSharp.fixed}
               alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
+              className="bioImage"
             />
             <p>
-              Written by <strong>{author}</strong> 
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Twitter
-              </a>
+              <div>
+                Articles and Musings by {author} ⚡️
+                {` `}
+                <br/>
+                <a href={`https://github.com/ZaymonFC`}>Github</a> <span> </span>
+                <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
+              </div>
             </p>
           </div>
         )

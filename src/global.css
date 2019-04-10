@@ -1,0 +1,43 @@
+.articleLink {
+    text-emphasis: none;
+    text-decoration: none;
+    text-decoration-style: dotted;
+    font-family: 'Fira Code';
+    background-image: none;
+    color: #1d232d;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+.articleLink:hover {
+    color: #596a86;
+    text-shadow: 2px, 2px, 2px,#1d232d;
+}
+
+.siteHeader a {
+    background-image: none;
+    color: #1d232d;
+}
+
+.siteHeader a:hover {
+    text-decoration: underline;
+    text-decoration-line: 1px;
+    color: #596a86;
+}
+
+.date {
+    color: #1d232d;
+    font-family: 'Fira Code';
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.main {
+    margin-bottom: 50;
+}
+
+.copy {
+    font-family: 'Fira Code';
+    font-size: 0.9em;
+    color: #1d232d;
+}

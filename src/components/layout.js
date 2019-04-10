@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { rhythm, scale } from "../utils/typography"
+
+import "./layout.css"
+import "../global.css"
 
 class Layout extends React.Component {
   render() {
@@ -17,13 +19,10 @@ class Layout extends React.Component {
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
+          className="siteHeader"
         >
           <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
+            className="titleLink"
             to={`/`}
           >
             {title}
@@ -34,16 +33,12 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
           }}
+          className="siteHeader"
         >
           <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
+            className="titleLink"
             to={`/`}
           >
             {title}
@@ -61,9 +56,9 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()} <span>Zaymon Foulds-Cook</span>
+        <main className="main">{children}</main>
+        <footer className="copy">
+          <span>{new Date().getFullYear()} Zaymon Foulds-Cook :></span>
         </footer>
       </div>
     )

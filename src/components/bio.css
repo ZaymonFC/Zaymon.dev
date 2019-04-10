@@ -1,0 +1,30 @@
+.bio {
+    width: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.bioImage {
+    margin-right: 15px;
+    min-width: 55;
+    border-radius: 100%;
+}
+
+.bio > p {
+    margin-top: 3px;
+    font-family: 'Fira Code';
+    font-size: 0.9em;
+}
+
+.bio a {
+    text-decoration: none;
+    background-image: none;
+    color: #1d232d;
+    font-size: 0.9em;
+}
+
+.bio a:hover {
+    color: #596a86;
+}
