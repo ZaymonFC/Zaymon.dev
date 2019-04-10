@@ -9,7 +9,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import "./bio.css"
+import "../global.css"
 
 function Bio() {
   return (

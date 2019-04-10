@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 import "../global.css"
+import "./blog.css"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,7 +21,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 className="postHeader">{post.frontmatter.title}</h1>
         <p className="date">
           {this.props.data.site.siteMetadata.author} - {post.frontmatter.date}
         </p>

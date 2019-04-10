@@ -1,32 +1,54 @@
+/* The Big Bois */
+/* ----------------------------------------------------------------------- */
+body {
+    background-color: #1d232d;
+}
+
+p {
+    font-family: 'Fira Sans';
+    font-size: 18px;
+    font-weight: 300;
+    color: #7d91b3;
+}
+
+.titleLink {
+    text-decoration: none;
+    text-shadow: none;
+    color: #7d91b3;
+}
+
 .articleLink {
+    text-shadow: none;
     text-emphasis: none;
     text-decoration: none;
-    text-decoration-style: dotted;
     font-family: 'Fira Mono';
     background-image: none;
-    color: #1d232d;
+    color: #7d91b3;
     margin-bottom: 5px;
     padding-bottom: 0;
 }
 
 .articleLink:hover {
-    color: #596a86;
-    text-shadow: 2px, 2px, 2px,#1d232d;
+    color: #93aad3;
+}
+
+.siteHeader {
+    font-family: 'Fira Mono';
 }
 
 .siteHeader a {
     background-image: none;
-    color: #1d232d;
+    color: #7d91b3;
 }
 
 .siteHeader a:hover {
     text-decoration: underline;
     text-decoration-line: 1px;
-    color: #596a86;
+    color: #93aad3;
 }
 
 .date {
-    color: #1d232d;
+    color: #7d91b3;
     font-family: 'Fira Mono';
     font-weight: 300;
     font-size: 0.8rem;
@@ -39,11 +61,41 @@
 .copy {
     font-family: 'Fira Mono';
     font-size: 0.9em;
-    color: #1d232d;
+    color: #7d91b3;
 }
 
-p {
-    font-family: 'Fira Sans';
-    font-size: 18px;
-    font-weight: 300;
+/* BIO */
+/* ----------------------------------------------------------------------- */
+.bio {
+    width: 500px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.bioImage {
+    margin-right: 15px;
+    min-width: 55;
+    border-radius: 100%;
+}
+
+.bio > p {
+    margin-top: 3px;
+    font-family: 'Fira Mono';
+    font-size: 0.9em;
+    color: #7d91b3;
+    font-weight: 500;
+}
+
+.bio a {
+    text-decoration: none;
+    background-image: none;
+    color: #7d91b3;
+    font-size: 0.9em;
+    text-shadow: none;
+}
+
+.bio a:hover {
+    color: #93aad3;
 }
