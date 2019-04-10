@@ -11,11 +11,11 @@ import OceanBeach from 'typography-theme-ocean-beach'
 
 OceanBeach.baseFontSize = '17.5px'
 OceanBeach.baseLineHeight = '1.75'
-OceanBeach.boldWeight = '600'
+OceanBeach.boldWeight = '500'
 OceanBeach.bodyColour = 'FFFFFF'
 OceanBeach.bodyFontFamily = ['Fira Sans']
 
-// delete OceanBeach.googleFonts
+delete OceanBeach.googleFonts
 
 const typography = new Typography(OceanBeach)
 
