@@ -63,7 +63,7 @@ module.exports = {
         background_color: `#2b3a47`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/zaymon-dev-icon.png`,
       },
     },
     `gatsby-plugin-offline`,
