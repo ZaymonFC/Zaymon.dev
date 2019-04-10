@@ -2,7 +2,7 @@
     text-emphasis: none;
     text-decoration: none;
     text-decoration-style: dotted;
-    font-family: 'Fira Code';
+    font-family: 'Fira Mono';
     background-image: none;
     color: #1d232d;
     margin-bottom: 5px;
@@ -27,7 +27,7 @@
 
 .date {
     color: #1d232d;
-    font-family: 'Fira Code';
+    font-family: 'Fira Mono';
     font-weight: 300;
     font-size: 0.8rem;
 }
@@ -37,7 +37,13 @@
 }
 
 .copy {
-    font-family: 'Fira Code';
+    font-family: 'Fira Mono';
     font-size: 0.9em;
     color: #1d232d;
+}
+
+p {
+    font-family: 'Fira Sans';
+    font-size: 20px;
+    font-weight: 300;
 }

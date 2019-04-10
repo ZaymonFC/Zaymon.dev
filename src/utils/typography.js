@@ -9,8 +9,8 @@ import OceanBeach from 'typography-theme-ocean-beach'
 //   }
 // }
 
-OceanBeach.baseFontSize = '17px'
-OceanBeach.baseLineHeight = '1.58'
+OceanBeach.baseFontSize = '17.5px'
+OceanBeach.baseLineHeight = '1.75'
 OceanBeach.boldWeight = '600'
 OceanBeach.bodyColour = 'FFFFFF'
 OceanBeach.bodyFontFamily = ['Fira Sans']
