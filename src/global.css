@@ -8,13 +8,13 @@ p {
     font-family: 'Fira Sans';
     font-size: 18px;
     font-weight: 300;
-    color: #7d91b3;
+    color: #9fb3d6;
 }
 
 .titleLink {
     text-decoration: none;
     text-shadow: none;
-    color: #7d91b3;
+    color: #9fb3d6;
 }
 
 .articleLink {
@@ -23,13 +23,13 @@ p {
     text-decoration: none;
     font-family: 'Fira Mono';
     background-image: none;
-    color: #7d91b3;
+    color: #9fb3d6;
     margin-bottom: 5px;
     padding-bottom: 0;
 }
 
 .articleLink:hover {
-    color: #93aad3;
+    color: #bdd2f5;
 }
 
 .siteHeader {
@@ -38,17 +38,17 @@ p {
 
 .siteHeader a {
     background-image: none;
-    color: #7d91b3;
+    color: #9fb3d6;
 }
 
 .siteHeader a:hover {
     text-decoration: underline;
     text-decoration-line: 1px;
-    color: #93aad3;
+    color: #bdd2f5;
 }
 
 .date {
-    color: #7d91b3;
+    color: #9fb3d6;
     font-family: 'Fira Mono';
     font-weight: 300;
     font-size: 0.8rem;
@@ -61,7 +61,7 @@ p {
 .copy {
     font-family: 'Fira Mono';
     font-size: 0.9em;
-    color: #7d91b3;
+    color: #9fb3d6;
 }
 
 /* BIO */
@@ -84,18 +84,18 @@ p {
     margin-top: 3px;
     font-family: 'Fira Mono';
     font-size: 0.9em;
-    color: #7d91b3;
+    color: #9fb3d6;
     font-weight: 500;
 }
 
 .bio a {
     text-decoration: none;
     background-image: none;
-    color: #7d91b3;
+    color: #9fb3d6;
     font-size: 0.9em;
     text-shadow: none;
 }
 
 .bio a:hover {
-    color: #93aad3;
+    color: #bdd2f5;
 }

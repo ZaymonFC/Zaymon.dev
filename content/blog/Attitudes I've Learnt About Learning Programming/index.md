@@ -34,9 +34,9 @@ Even after years of learning and experimentation I am still fine tuning the way 
 Learning may be hard, but it can also be fun and exciting. To get the most out of it you have to give the act of learning and experimentation the time, thought and process it deserves. Good luck developing your own learning framework!
 ***
 Let me know what you think? Any feedback on my writing and content is greatly appreciated. I am new to this craft. :>
-***
+
 Acknowledgements.
 
-Thanks to the following people for reading my work and giving me suggestions for improvement:
+_Thanks to the following people for reading my work and giving me suggestions for improvement:_
 
-Ben Follington | Ethan Arrowood | Eliza De Castro | Dylan Janssen | Andrei Ionescu
+_Ben Follington | Ethan Arrowood | Eliza De Castro | Dylan Janssen | Andrei Ionescu_

@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Zaymon.Dev`,
+        short_name: `ZaymonDev`,
         start_url: `/`,
         background_color: `#2b3a47`,
         theme_color: `#ffffff`,

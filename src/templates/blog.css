@@ -1,4 +1,9 @@
 .postHeader {
     font-family: 'Fira Mono';
-    color: #7d91b3;
+    color: #9fb3d6;
+}
+
+hr {
+    background-color: #9fb3d6;
+    height: 1px;
 }
