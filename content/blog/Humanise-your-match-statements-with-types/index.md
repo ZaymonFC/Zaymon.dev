@@ -107,6 +107,7 @@ let deleteUser
 
 Some may argue that this technique is _obscuring_ the logic for matching and branching. And in some cases this would be __overkill__ and is unnecessary.
 However, for more complicated examples like the one above, by clearly defining a __boundary__ around the match logic we are forcing ourselves to write all of the logic in one place.
+
 Coming into a codebase with many long functions where permission and other match logic is often spread out,
 condensing the logic into types like this is a very effective way to reduce the time required to understand the rules at play.
 ---
