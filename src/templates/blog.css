@@ -8,9 +8,19 @@ hr {
     height: 1px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Fira Mono';
     color: #9fb3d6;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 2.3rem;
+}
+
+h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 p {
@@ -35,7 +45,7 @@ li {
 pre {
     background-color: #191d25;
     border-radius: 15px;
-    padding: 15px 20px 15px 20px;
+    padding: 20px 20px 20px 20px;
     line-height: 10px;
     max-width: 680px;
     min-width: 380px;
@@ -43,6 +53,19 @@ pre {
     overflow-wrap: break-word;
 }
 
+/* INLINE CODE */
+p > code, li > code {
+    color: #7aabff;
+    font-family: 'inconsolata';
+    font-weight: 300;
+    font-size: 0.95rem;
+    overflow-wrap: break-word;
+    background-color: #191d25;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* CODE BLOCKS */
 pre > code { 
     color: #ccd9f0;
     font-family: 'inconsolata';
@@ -50,17 +73,6 @@ pre > code {
     font-size: 0.9rem;
     overflow-wrap: break-word;
     line-height: 1.2rem;
-}
-
-p > code {
-    color: #ccd9f0;
-    font-family: 'inconsolata';
-    font-weight: 300;
-    font-size: 0.94rem;
-    overflow-wrap: break-word;
-    background-color: #191d25;
-    border-radius: 4px;
-    padding: 5px;
 }
 
 /* CODE THEME */

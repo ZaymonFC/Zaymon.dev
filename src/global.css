@@ -51,6 +51,25 @@ p {
     color: #5398ff;
 }
 
+.site-footer {
+    font-family: 'Fira Mono';
+    font-size: 0.9em;
+    color: #9fb3d6;
+}
+
+.site-footer a {
+    text-shadow: none;
+    text-decoration: none;
+    background-image: none;
+    color: #537bff;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+    text-decoration-style: line;
+    color: #5398ff;
+}
+
 .date {
     color: #9fb3d6;
     font-family: 'Fira Mono';
@@ -60,12 +79,6 @@ p {
 
 .main {
     margin-bottom: 50;
-}
-
-.copy {
-    font-family: 'Fira Mono';
-    font-size: 0.9em;
-    color: #9fb3d6;
 }
 
 /* BIO */

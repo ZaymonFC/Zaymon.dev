@@ -43,14 +43,16 @@ let deleteUser
 
 Very quickly the mental overhead 🤯 required to parse match statements gets in the way of code readability.
 
-Some Problems:
+#### Some Problems:
 - Code is hard to scan at a glance
 - Logic for branching is hard to maintain because there is no name given to cases
+- Matching on `bool` and a `Union Case` can be confusing
+- Calculating booleans in a greater control flow is __brittle__ and __clutters__ the function
 
 ### Introducing - single use types
 Creating a private single use type serves two purposes:
-- Modularize match logic
-- Create human readable control flow
+- __Modularize__ match logic
+- Create __human readable__ control flow
 
 Lets create a type for our complicated example. First what would you name each branch? There are four options:
 1. Permitted
