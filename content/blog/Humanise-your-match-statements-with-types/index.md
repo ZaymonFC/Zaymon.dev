@@ -2,11 +2,11 @@
 title: Humanise your match statements with types in fsharp
 date: "2019-04-16T10:00:00+1000"
 author: Zaymon Foulds-Cook
-description: Something something
+description: Exploring the application of single use types to enhance the readability of match expressions.
 ---
 
 ### The Problem
-I've been programming in fsharp for a little over 3 months.  I've noticed a repeating pattern when it comes to using booleans in match statements.
+I've been programming in fsharp for a little over 3 months.  I've noticed a repeating struggle when it comes to matching on multiple variables or expressions in match statements.
 
 ```fsharp
 let deleteUser
