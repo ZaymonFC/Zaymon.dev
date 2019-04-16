@@ -4,9 +4,6 @@
   "description": "Personal Blog",
   "version": "0.1.0",
   "author": "Zaymon Foulds-Cook",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
   "dependencies": {
     "gatsby": "^2.3.16",
     "gatsby-image": "^2.0.37",
@@ -41,7 +38,6 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
