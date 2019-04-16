@@ -41,6 +41,7 @@ class BlogPostTemplate extends React.Component {
             listStyle: `none`,
             padding: 0,
           }}
+          className="prevNext"
         >
           <li>
             {previous && (
