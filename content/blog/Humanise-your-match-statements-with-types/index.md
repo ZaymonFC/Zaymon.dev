@@ -10,11 +10,11 @@ I've been programming in fsharp for a little over 3 months.  I've noticed a repe
 
 ```fsharp
 let deleteUser
-  (user: User)
+  (deleteUser: User -> unit)
+  (deleteUserWithLogging: User -> unit)
   (isAdmin: bool)
   (canDeleteUser: bool)
-  (deleteUser: User -> unit)
-  (deleteUserWithLogging: User -> unit) =
+  (user: User) =
 
   match isAdmin canDeleteUser with
   | true, true -> deleteUser user
@@ -26,11 +26,11 @@ You're probably thinking _"This is perfectly readable I don't see any problem he
 
 ```fsharp
 let deleteUser
-  (user: User)
+  (deleteUser: User -> unit)
+  (deleteUserWithLogging: User -> unit)
   (currentUser: User)
   (permissions: Permission list)
-  (deleteUser: User -> unit)
-  (deleteUserWithLogging: User -> unit) =
+  (user: User) =
 
   let canDeleteUsers = permissions |> List.contains CanDeleteUser
 
@@ -68,6 +68,8 @@ let private DeletionActions =
 | CannotDeleteAdminAsUser
 | NotPermitted
 ```
+> It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and it's visibility is private we really want to
+tailor the type to the expression at hand.
 
 We can encode our match logic into a static constructor which is a member of the type `DeletionActions`.
 
@@ -90,11 +92,11 @@ with
 Now refactoring the original code we can see how much clearer it is.
 ```fsharp
 let deleteUser
-  (user: User)
+  (deleteUser: User -> unit)
+  (deleteUserWithLogging: User -> unit)
   (currentUser: User)
   (permissions: Permission list)
-  (deleteUser: User -> unit)
-  (deleteUserWithLogging: User -> unit) =
+  (user: User) =
 
   let action = DeletionActions.OfConditions currentUserType permissions user
 
