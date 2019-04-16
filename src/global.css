@@ -52,9 +52,19 @@ p {
 }
 
 .site-footer {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 250px;
     font-family: 'Fira Mono';
     font-size: 0.9em;
     color: #9fb3d6;
+}
+
+.site-footer--lower {
+    max-width: 205px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .site-footer a {

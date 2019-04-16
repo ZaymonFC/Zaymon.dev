@@ -57,9 +57,10 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main className="main">{children}</main>
         <footer className="site-footer">
-          <span>{new Date().getFullYear()} Zaymon Foulds-Cook :></span> 
-          <br/>
-          <span><small>This site has <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a> bones</small></span>
+          <span>{new Date().getFullYear()} Zaymon Foulds-Cook :></span>
+          <div className="site-footer--lower">
+            <span><small>This site has <a href="https://github.com/gatsbyjs/gatsby">Gatsby</a> bones</small></span>
+          </div>
         </footer>
       </div>
     )
