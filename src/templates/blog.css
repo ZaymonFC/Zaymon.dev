@@ -7,3 +7,79 @@ hr {
     background-color: #9fb3d6;
     height: 1px;
 }
+
+h1, h2, h3 {
+    font-family: 'Fira Mono';
+    color: #9fb3d6;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+ul, ol {
+    font-family: 'Fira Sans';
+    font-size: 18px;
+    font-weight: 300;
+    color: #9fb3d6;
+    margin-bottom: 1rem;
+    margin-top: -10px;
+}
+
+li {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+/* Code Styles */
+pre {
+    background-color: #191d25;
+    border-radius: 15px;
+    padding: 15px 20px 15px 20px;
+    line-height: 10px;
+    max-width: 680px;
+    min-width: 380px;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+
+pre > code { 
+    color: #ccd9f0;
+    font-family: 'inconsolata';
+    font-weight: 200;
+    font-size: 0.9rem;
+    overflow-wrap: break-word;
+    line-height: 1.2rem;
+}
+
+p > code {
+    color: #ccd9f0;
+    font-family: 'inconsolata';
+    font-weight: 300;
+    font-size: 0.94rem;
+    overflow-wrap: break-word;
+    background-color: #191d25;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* CODE THEME */
+.keyword {
+    color: #5e83ff;
+}
+
+.punctuation {
+    color: #a0bff5;
+}
+
+.class-name {
+    color: #ecda75;
+}
+
+.operator {
+    color: #a0bff5;
+}
+
+.string {
+    color: #0aeb60;
+}

@@ -1,5 +1,5 @@
 ---
-title: Attitudes I've Learnt About Learning Programming
+title: Attitudes on Learning Programming
 date: "2019-04-05T10:00:00+1000"
 author: Zaymon Foulds-Cook
 description: Principles I have learned to tackle new problems and consistently learn throughout my career with programming.

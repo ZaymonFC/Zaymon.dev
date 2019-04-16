@@ -11092,6 +11092,21 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-fira-mono@0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-fira-mono/-/typeface-fira-mono-0.0.72.tgz#b396d2a08814bb3a32d94ef71c74d37883c3475b"
+  integrity sha512-bouzjtniGMrakhazipUl6mskswe7UvH3qynU5Wsl0O7NMuL178VtZ0pOqUGsjBJ42l64GZo9nUMI1eSK4kvJbQ==
+
+typeface-fira-sans@0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-fira-sans/-/typeface-fira-sans-0.0.54.tgz#1a5fbd8fdc6195ee580e765dbcc4113df18f0f6f"
+  integrity sha512-WPbYqk8w4YRWWCGOrBDXo0iPUmNdTR3frTq2I16+RSLJMNbIDjRMpbMjmyMipBmXN8bwuvyumCgJ5oGpuzpY3g==
+
+typeface-inconsolata@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-inconsolata/-/typeface-inconsolata-0.0.72.tgz#6b5c92132c7d3e83f7a17025087d8d717ada63d5"
+  integrity sha512-ITFhcI2ANWmSEPVgQgPJHh6RyiCf1pnkRXj1VxjsxfSwRrXFGgGITRJV+HxW7kTRDx+3/6RReT2/SWsMPqJaTA==
+
 typeface-merriweather@0.0.72:
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.72.tgz#2b990f5293252052d51d170c82d3892319ff0555"
@@ -11111,6 +11126,14 @@ typography-normalize@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.19.tgz#58e0cf12466870c5b27006daa051fe7307780660"
   integrity sha512-vtnSv/uGBZVbd4e/ZhZB9HKBgKKlWQUXw74+ADIHHxzKp27CEf8PSR8TX1zF2qSyQ9/qMdqLwXYz8yRQFq9JLQ==
+
+typography-theme-ocean-beach@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-ocean-beach/-/typography-theme-ocean-beach-0.16.19.tgz#712115be5d7351abf9c2973b944d9eb862c3bb0b"
+  integrity sha512-UawUuvxUxu9jjipfqkzakMwvSXHBZdovORWPLFAXg9vl2EN3nvE1W0s6XTdDVrDUvgPkwUJ67CaCrFlQlIv+/g==
+  dependencies:
+    gray-percentage "^2.0.0"
+    typography-breakpoint-constants "^0.16.19"
 
 typography-theme-wordpress-2016@^0.16.19:
   version "0.16.19"
