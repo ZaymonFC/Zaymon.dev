@@ -54,7 +54,7 @@ pre {
 }
 
 /* INLINE CODE */
-p > code, li > code {
+p > code, li > code, ul > code {
     color: #7aabff;
     font-family: 'inconsolata';
     font-weight: 300;
