@@ -76,22 +76,22 @@ pre > code {
 }
 
 /* CODE THEME */
-.keyword {
+.language-fsharp > .keyword {
     color: #5e83ff;
 }
 
-.punctuation {
+.language-fsharp > .punctuation {
     color: #a0bff5;
 }
 
-.class-name {
+.language-fsharp > .class-name {
     color: #ecda75;
 }
 
-.operator {
+.language-fsharp > .operator {
     color: #a0bff5;
 }
 
-.string {
+.language-fsharp > .string {
     color: #0aeb60;
 }

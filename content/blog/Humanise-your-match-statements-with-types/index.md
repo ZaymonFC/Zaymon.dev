@@ -5,11 +5,13 @@ author: Zaymon Foulds-Cook
 description: Exploring the application of single use types to enhance the readability of match expressions.
 ---
 
+> This article is currently a __draft__. It may change over the next few days.
+
 ### The Problem
 I've been programming in fsharp for a little over 3 months.  I've noticed a repeating struggle when it comes to matching on multiple variables or expressions in match statements.
 
 ```fsharp
-let deleteUser
+let handleDeleteUser
   (deleteUser: User -> unit)
   (deleteUserWithLogging: User -> unit)
   (isAdmin: bool)
@@ -25,7 +27,7 @@ let deleteUser
 You're probably thinking _"This is perfectly readable I don't see any problem here."_ Let's dial up the complexity a little bit.
 
 ```fsharp
-let deleteUser
+let handleDeleteUser
   (deleteUser: User -> unit)
   (deleteUserWithLogging: User -> unit)
   (currentUser: User)
@@ -68,8 +70,7 @@ let private DeletionActions =
 | CannotDeleteAdminAsUser
 | NotPermitted
 ```
-> It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and it's visibility is private we really want to
-tailor the type to the expression at hand.
+> It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and its visibility is private we really want to tailor the type to the expression at hand.
 
 We can encode our match logic into a static constructor which is a member of the type `DeletionActions`.
 
@@ -91,7 +92,7 @@ with
 
 Now refactoring the original code we can see how much clearer it is.
 ```fsharp
-let deleteUser
+let handleDeleteUser
   (deleteUser: User -> unit)
   (deleteUserWithLogging: User -> unit)
   (currentUser: User)
@@ -110,7 +111,40 @@ let deleteUser
 Some may argue that this technique is _obscuring_ the logic for matching and branching. And in some cases this would be __overkill__ and is unnecessary.
 However, for more complicated examples like the one above, by clearly defining a __boundary__ around the match logic we are forcing ourselves to write all of the logic in one place.
 
-Coming into a codebase with many long functions where permission and other match logic is often spread out,
-condensing the logic into types like this is a very effective way to reduce the time required to understand the rules at play.
+### Using Active Patterns
+This same logic can be encoded into an `Active Patterns`.
+```fsharp
+let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
+  (currentUserType, permissions, user) =
+    let canDeleteUsers = permissions |> List.contains CanDeleteUser
+    match currentUserType canDeleteUsers user.Type with
+    | Admin, true, _ -> Permitted
+    | User, true, User -> PermittedWithLogging
+    | User, true, Admin -> CannotDeleteAdminAsUser
+    | _, _, _ -> NotPermitted
+
+let handleDeleteUser
+  (deleteUser: User -> unit)
+  (deleteUserWithLogging: User -> unit)
+  (currentUser: User)
+  (permissions: Permission list)
+  (user: User) =
+
+  match (currentUserType, permissions, user) with
+  | Permitted -> deleteUser user
+  | PermittedWithLogging -> deleteUserWithLogging user
+  | CannotDeleteAdminAsUser -> failwith "Cannot delete admin user"
+  | NotPermitted -> failwith "You do not have the required permissions"
+```
+
+In this case the active pattern's definition is the structure of the union we want to match on. The body of the active pattern is our matching logic. The active pattern takes a tuple of parameters, very similar to how our types static member took the three parameters. The active pattern's usage is _inferred_ in the `handleDeleteUser` function based on the tuple of parameters which match the pattern and the union cases we are matching on.
+
+#### Which approach is right for me?
+It depends. 
+
+...
+
+Coming into a codebase with many long functions where permission and other match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to reduce the time required to understand the rules at play.
+
 ---
-If you disagree or have any suggestions for extending this technique __please__ get in touch with me on twitter :>.
+If you disagree, have any suggestions for extending this technique or have questions about the approach  __please__ don't hesitate to get in touch with me on twitter :>.
