@@ -91,7 +91,7 @@ with
 ```
 
 Now refactoring the original code we can see how much clearer it is.
-```fsharp
+```fsharp{8,10}
 let handleDeleteUser
   (deleteUser: User -> unit)
   (deleteUserWithLogging: User -> unit)
@@ -113,7 +113,7 @@ However, for more complicated examples like the one above, by clearly defining a
 
 ### Using Active Patterns
 This same logic can be encoded into an `Active Pattern`.
-```fsharp
+```fsharp{1-8,17}
 let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
   (currentUserType, permissions, user) =
     let canDeleteUsers = permissions |> List.contains CanDeleteUser

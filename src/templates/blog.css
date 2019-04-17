@@ -43,18 +43,16 @@ li {
 
 /* Code Styles */
 pre {
-    background-color: #161920;
+    background-color: #141524;
     border-radius: 15px;
     padding: 20px 20px 20px 20px;
     line-height: 10px;
-    max-width: 680px;
     overflow: auto;
     overflow-wrap: break-word;
 }
 
 @media (max-width: 599px) {
     pre {
-        padding: 20px 20px 20px 20px;
         border-radius: 0 0 0 0;
         margin-left: -1.5rem;
         margin-right: -1.5rem;
@@ -62,25 +60,25 @@ pre {
 }
 
 /* INLINE CODE */
-p > code, li > code, ul > code {
+p code, li  code, ul code {
     color: #7aabff;
     font-family: 'inconsolata';
     font-weight: 300;
     font-size: 0.95rem;
     overflow-wrap: break-word;
-    background-color: #191d25;
+    background-color: #141524;
     border-radius: 4px;
     padding: 5px;
 }
 
 /* CODE BLOCKS */
-pre > code { 
+pre code { 
     color: #ccd9f0;
     font-family: 'inconsolata';
     font-weight: 200;
     font-size: 0.9rem;
     overflow-wrap: break-word;
-    line-height: 1.2rem;
+    line-height: 1.3rem;
 }
 
 /* CODE THEME */
@@ -102,4 +100,13 @@ pre > code {
 
 .language-fsharp .string {
     color: #0aeb60;
+}
+
+.language-fsharp .gatsby-highlight-code-line {
+    background-color: #1c2030;
+    display: block;
+    border-left: 5px solid #ffb7b7;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 15px;
 }
