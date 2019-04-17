@@ -141,6 +141,11 @@ p {
     margin-top: 20px;
     margin-right: 15px;
     margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
 }
 
 .prevNext li > a{
