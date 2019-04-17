@@ -25,7 +25,7 @@ class BlogPostTemplate extends React.Component {
         <p className="date">
           {this.props.data.site.siteMetadata.author} - {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="blogBody" dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),

@@ -11,6 +11,13 @@ p {
     color: #9fb3d6;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 730px;
+    padding: 1.5rem 1.5rem;
+}
+
 ::selection {
     background: #ffb7b7; /* WebKit/Blink Browsers */
 }

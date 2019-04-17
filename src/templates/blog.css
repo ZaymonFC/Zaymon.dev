@@ -48,9 +48,17 @@ pre {
     padding: 20px 20px 20px 20px;
     line-height: 10px;
     max-width: 680px;
-    min-width: 380px;
     overflow: auto;
     overflow-wrap: break-word;
+}
+
+@media (max-width: 599px) {
+    pre {
+        padding: 20px 20px 20px 20px;
+        border-radius: 0 0 0 0;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
 }
 
 /* INLINE CODE */
