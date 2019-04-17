@@ -5,8 +5,6 @@ author: Zaymon Foulds-Cook
 description: Exploring the application of single use types to enhance the readability of match expressions.
 ---
 
-> This article is currently a __draft__. It may change over the next few days.
-
 ### The Problem
 I've been programming in fsharp for a little over 3 months.  I've noticed a repeating struggle when it comes to matching on multiple variables or expressions in match statements.
 
