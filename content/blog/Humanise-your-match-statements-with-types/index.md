@@ -70,7 +70,7 @@ let private DeletionActions =
 | CannotDeleteAdminAsUser
 | NotPermitted
 ```
-> It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and its visibility is private we really want to tailor the type to the expression at hand.
+> It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and its visibility is private we really want to __tailor__ the type to the expression at hand.
 
 We can encode our match logic into a static constructor which is a member of the type `DeletionActions`.
 
@@ -112,7 +112,7 @@ Some may argue that this technique is _obscuring_ the logic for matching and bra
 However, for more complicated examples like the one above, by clearly defining a __boundary__ around the match logic we are forcing ourselves to write all of the logic in one place.
 
 ### Using Active Patterns
-This same logic can be encoded into an `Active Patterns`.
+This same logic can be encoded into an `Active Pattern`.
 ```fsharp
 let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
   (currentUserType, permissions, user) =
@@ -142,9 +142,9 @@ In this case the active pattern's definition is the structure of the union we wa
 #### Which approach is right for me?
 It depends. 
 
-...
+... Work In Progress
 
-Coming into a codebase with many long functions where permission and other match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to reduce the time required to understand the rules at play.
+Coming into a codebase with many long functions where permission and other match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to __reduce the time required__ to understand the rules at play.
 
 ---
 If you disagree, have any suggestions for extending this technique or have questions about the approach  __please__ don't hesitate to get in touch with me on twitter :>.

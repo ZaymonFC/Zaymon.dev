@@ -11,7 +11,7 @@ import OceanBeach from 'typography-theme-ocean-beach'
 
 OceanBeach.baseFontSize = '17.5px'
 OceanBeach.baseLineHeight = '1.75'
-OceanBeach.boldWeight = '500'
+OceanBeach.boldWeight = '400'
 OceanBeach.bodyColour = 'FFFFFF'
 OceanBeach.bodyFontFamily = ['Fira Sans']
 

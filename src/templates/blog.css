@@ -76,11 +76,11 @@ pre > code {
 }
 
 /* CODE THEME */
-.language-fsharp > .keyword {
+.language-fsharp .keyword {
     color: #5e83ff;
 }
 
-.language-fsharp > .punctuation {
+.language-fsharp .punctuation {
     color: #a0bff5;
 }
 
@@ -88,10 +88,10 @@ pre > code {
     color: #ecda75;
 }
 
-.language-fsharp > .operator {
+.language-fsharp .operator {
     color: #a0bff5;
 }
 
-.language-fsharp > .string {
+.language-fsharp .string {
     color: #0aeb60;
 }
