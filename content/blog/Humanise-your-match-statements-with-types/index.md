@@ -43,7 +43,7 @@ let handleDeleteUser
   | _, _, _ -> failwith "You do not have the required permissions"
 ```
 
-Very quickly the mental overhead 🤯 required to parse match statements gets in the way of code readability.
+Very quickly the mental overhead 🤯 required to parse multivariable match statements gets in the way of code readability.
 
 #### Some Problems:
 - Code is hard to scan at a glance
@@ -140,10 +140,13 @@ let handleDeleteUser
 In this case the active pattern's definition is the structure of the union we want to match on. The body of the active pattern is our matching logic. The active pattern takes a tuple of parameters, very similar to how our types static member took the three parameters. The active pattern's usage is _inferred_ in the `handleDeleteUser` function based on the tuple of parameters which match the pattern and the union cases we are matching on.
 
 #### Which approach is right for me?
-It depends. 
+_It depends_. 
 
-... Work In Progress
+I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from parameters to cases is more explicit. However, `single case types` are more boiler plate code in comparison.
 
+After further experimentation and use over the next few months I will revisit this article and pick my favourite.
+
+#### The Wrap
 Coming into a codebase with many long functions where permission and other match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to __reduce the time required__ to understand the rules at play.
 
 ---

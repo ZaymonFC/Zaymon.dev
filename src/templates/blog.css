@@ -107,10 +107,14 @@ pre code {
 }
 
 .language-fsharp .gatsby-highlight-code-line {
-    background-color: #1c2030;
+    background-color: #182042;
     display: block;
     border-left: 5px solid #ffb7b7;
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 15px;
+}
+
+.language-fsharp .gatsby-highlight-code-line .keyword {
+    color: #93acff;
 }
