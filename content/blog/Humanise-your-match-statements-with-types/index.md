@@ -2,7 +2,7 @@
 title: Humanise your match statements with types in fsharp
 date: "2019-04-16T10:00:00+1000"
 author: Zaymon Foulds-Cook
-description: Exploring the application of single use types to enhance the readability of match expressions.
+description: Exploring the application of single use types and active patterns to enhance the readability of match expressions.
 ---
 
 ### The Problem
