@@ -41,6 +41,10 @@ li {
     margin-bottom: 5px;
 }
 
+blockquote {
+    border-left: 5px #ffb7b7 solid;
+}
+
 /* Code Styles */
 pre {
     background-color: #141524;
