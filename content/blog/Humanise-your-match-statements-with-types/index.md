@@ -16,7 +16,7 @@ let handleDeleteUser
   (canDeleteUser: bool)
   (user: User) =
 
-  match isAdmin canDeleteUser with
+  match isAdmin, canDeleteUser with
   | true, true -> deleteUser user
   | false, true -> deleteUserWithLogging user
   | _, _ -> ()
@@ -34,7 +34,7 @@ let handleDeleteUser
 
   let canDeleteUsers = permissions |> List.contains CanDeleteUser
 
-  match currentUserType canDeleteUsers user.Type with
+  match currentUserType, canDeleteUsers, user.Type with
   | Admin, true, _ -> deleteUser user
   | User, true, User -> deleteUserWithLogging user
   | User, true, Admin -> failwith "Cannot delete admin user"
@@ -81,7 +81,7 @@ let private DeletionActions =
 with
   static member OfConditions currentUserType permissions user : DeletionActions =
     let canDeleteUsers = permissions |> List.contains CanDeleteUser
-    match currentUserType canDeleteUsers user.Type with
+    match currentUserType, canDeleteUsers, user.Type with
     | Admin, true, _ -> Permitted
     | User, true, User -> PermittedWithLogging
     | User, true, Admin -> CannotDeleteAdminAsUser
@@ -115,7 +115,7 @@ This same logic can be encoded into an `Active Pattern`.
 let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
   (currentUserType, permissions, user) =
     let canDeleteUsers = permissions |> List.contains CanDeleteUser
-    match currentUserType canDeleteUsers user.Type with
+    match currentUserType, canDeleteUsers, user.Type with
     | Admin, true, _ -> Permitted
     | User, true, User -> PermittedWithLogging
     | User, true, Admin -> CannotDeleteAdminAsUser

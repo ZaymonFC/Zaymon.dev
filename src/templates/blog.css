@@ -46,20 +46,30 @@ blockquote {
 }
 
 /* Code Styles */
+.gatsby-highlight {
+    overflow: auto;
+    margin-bottom: 1.2rem;
+}
+
 pre {
     background-color: #141524;
     border-radius: 15px;
-    padding: 20px 20px 20px 20px;
     line-height: 10px;
-    overflow: auto;
-    overflow-wrap: break-word;
+    min-width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    margin: 0;
 }
 
 @media (max-width: 685px) {
-    pre {
-        border-radius: 0 0 0 0;
+    .gatsby-highlight {
         margin-left: -1.5rem;
         margin-right: -1.5rem;
+    }
+
+    pre {
+        border-radius: 0 0 0 0;
     }
 }
 
@@ -81,7 +91,6 @@ pre code {
     font-family: 'inconsolata';
     font-weight: 200;
     font-size: 0.9rem;
-    overflow-wrap: break-word;
     line-height: 1.3rem;
 }
 
@@ -110,9 +119,10 @@ pre code {
     background-color: #182042;
     display: block;
     border-left: 5px solid #ffb7b7;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -21px;
+    margin-right: -21px;
     padding-left: 15px;
+    padding-right: 20px;
 }
 
 .language-fsharp .gatsby-highlight-code-line .keyword {
