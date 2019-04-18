@@ -15,7 +15,7 @@ h1, h2, h3, h4 {
 
 h1, h2, h3 {
     margin-bottom: 1.5rem;
-    margin-top: 2.3rem;
+    margin-top: 2.4rem;
 }
 
 h4 {
@@ -48,7 +48,7 @@ blockquote {
 /* Code Styles */
 .gatsby-highlight {
     overflow: auto;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 pre {
@@ -103,7 +103,7 @@ pre code {
     color: #a0bff5;
 }
 
-.language-fsharp > .class-name {
+.language-fsharp .class-name {
     color: #ecda75;
 }
 

@@ -89,7 +89,7 @@ with
 ```
 
 Now refactoring the original code we can see how much clearer it is.
-```fsharp{8,10}
+```fsharp
 let handleDeleteUser
   (deleteUser: User -> unit)
   (deleteUserWithLogging: User -> unit)
@@ -97,9 +97,9 @@ let handleDeleteUser
   (permissions: Permission list)
   (user: User) =
 
-  let action = DeletionActions.OfConditions currentUserType permissions user
+  let action = DeletionActions.OfConditions currentUserType permissions user // highlight-line
 
-  match action with
+  match action with // highlight-line
   | Permitted -> deleteUser user
   | PermittedWithLogging -> deleteUserWithLogging user
   | CannotDeleteAdminAsUser -> failwith "Cannot delete admin user"
@@ -111,7 +111,8 @@ However, for more complicated examples like the one above, by clearly defining a
 
 ### Using Active Patterns
 This same logic can be encoded into an `Active Pattern`.
-```fsharp{1-8,17}
+```fsharp
+// highlight-start
 let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
   (currentUserType, permissions, user) =
     let canDeleteUsers = permissions |> List.contains CanDeleteUser
@@ -120,6 +121,7 @@ let (|Permitted|PermittedWithLogging|CannotDeleteAdminAsUser|NotPermitted|)
     | User, true, User -> PermittedWithLogging
     | User, true, Admin -> CannotDeleteAdminAsUser
     | _, _, _ -> NotPermitted
+// highlight-end
 
 let handleDeleteUser
   (deleteUser: User -> unit)
@@ -128,7 +130,7 @@ let handleDeleteUser
   (permissions: Permission list)
   (user: User) =
 
-  match (currentUserType, permissions, user) with
+  match (currentUserType, permissions, user) with // highlight-line
   | Permitted -> deleteUser user
   | PermittedWithLogging -> deleteUserWithLogging user
   | CannotDeleteAdminAsUser -> failwith "Cannot delete admin user"
