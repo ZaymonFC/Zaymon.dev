@@ -142,7 +142,7 @@ In this case the active pattern's definition is the structure of the union we wa
 #### Which approach is right for me?
 _It depends_. 
 
-I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from parameters to cases is more explicit. However, `single case types` are more boiler plate code in comparison.
+I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from parameters to cases is more explicit, however, they are more boiler plate code in comparison.
 
 After further experimentation and use over the next few months I will revisit this article and pick my favourite.
 
