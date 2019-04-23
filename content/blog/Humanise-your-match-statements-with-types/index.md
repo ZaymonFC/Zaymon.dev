@@ -8,6 +8,8 @@ description: Exploring the application of single use types and active patterns t
 ### The Problem
 I've been programming in fsharp for a little over 3 months.  I've noticed a repeating struggle when it comes to matching on multiple variables or expressions in match statements.
 
+Consider the following function.
+
 ```fsharp
 let handleDeleteUser
   (deleteUser: User -> unit)
@@ -22,7 +24,7 @@ let handleDeleteUser
   | _, _ -> ()
 ```
 
-You're probably thinking _"This is perfectly readable I don't see any problem here."_ Let's dial up the complexity a little bit.
+You're probably thinking _"This is perfectly readable I don't see a problem here."_ Let's dial up the complexity a little bit.
 
 ```fsharp
 let handleDeleteUser
@@ -142,12 +144,12 @@ In this case the active pattern's definition is the structure of the union we wa
 #### Which approach is right for me?
 _It depends_. 
 
-I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from parameters to cases is more explicit, however, they are more boiler plate code in comparison.
+I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from the input parameters to the decision cases is more explicit, however, they are more boiler plate code in comparison to `active patterns`.
 
 After further experimentation and use over the next few months I will revisit this article and pick my favourite.
 
 #### The Wrap
-Coming into a codebase with many long functions where permission and other match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to __reduce the time required__ to understand the rules at play.
+So far in my experience coming into a codebase with many long functions where match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to __reduce the time required__ to understand the rules at play.
 
 ---
-If you disagree, have any suggestions for extending this technique or have questions about the approach  __please__ don't hesitate to get in touch with me on twitter :>.
+If you disagree, have any suggestions for extending this technique or have questions about the approach  __please don't hesitate__ to get in touch with me on twitter :>.
