@@ -65,17 +65,20 @@ For the transformation to be isomorphic no information can be lost in either dir
 
 Here is an example of a transformation that is not an __isomorphism__:
 ```fsharp
-["Hello"; " world!"] |> List.fold (+) "" // Results in "Hello world!"
+["Hello"; " world!"] |> List.fold (+) "" //highlight-line
+// Results in "Hello world!"
 ```
 When the `string list` is collapsed into a `string` we _lose information_. There is no function that can take the produced `string` and __definitively calculate__ the `string list` that produced it.
 
 Here is an example of a transformation that is an __isomorphism__:
 ```fsharp
-[10; 20; 30] |> List.map (fun x -> x * 2) // Results in [20; 40; 60]
+[10; 20; 30] |> List.map (fun x -> x * 2) //highlight-line
+// Results in [20; 40; 60]
 ```
 
 Since no information about the structure is lost there exists a function that can perform the __reverse transformation__:
 ```fsharp
-[20; 40; 60] |> List.map (fun x -> x / 2) // Results in [10; 20; 30]
+[20; 40; 60] |> List.map (fun x -> x / 2) //highlight-line
+// Results in [10; 20; 30]
 ```
 
