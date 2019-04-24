@@ -1,8 +1,8 @@
 ---
-title: All the Morphisms
+title: Introduction to Morphisms and Functors
 date: "2019-04-23T10:00:00+1000"
 author: Zaymon Foulds-Cook
-description: Exploring the world of Morphisms in FP.
+description: Exploring the world of Morphisms and Functors.
 ---
 
 > This article is currently in draft form and will be subject to change over the coming __time units__.
@@ -26,7 +26,7 @@ A morphism is a __function__ which takes a __thing__ of `Type A` and converts it
 
 #### Morphism Recap
 - Any mapping function is a __morphism__ if the function _maps_ or _transforms_ from one type to another.
-- __Functors__ are __morphisms__
+- __Functors__ are __morphisms__ in computation.
 
 #### Functors
 Functors are just morphisms where the transformation is expressed as a function.
@@ -79,4 +79,3 @@ Since no information about the structure is lost there exists a function that ca
 [20; 40; 60] |> List.map (fun x -> x / 2) // Results in [10; 20; 30]
 ```
 
-### 4. Catamorphism
