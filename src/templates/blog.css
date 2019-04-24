@@ -115,6 +115,10 @@ pre code {
     color: #0aeb60;
 }
 
+.language-fsharp .comment {
+    color: #9a9ea7;
+}
+
 .language-fsharp .gatsby-highlight-code-line {
     background-color: #182042;
     display: block;
