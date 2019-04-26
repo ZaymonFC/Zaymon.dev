@@ -9,7 +9,7 @@ description: Exploring the world of Morphisms and Functors.
 
 > I am still in the __research phase__ and I have made my __best efforts__ to provide information that is correct, however, there will __likely be small mistakes__ or __inaccuracies__.
 
-Mathematical jargon is _in my opinion_ the biggest __hinderance__ to FP adoption. It's through phrases like _"A monad is just a monoid in category of endofunctors"_ that __real programmers__ keep the gates to all the good that functional programming has to offer. I'm writing this article to cement my own to understanding about the various key morphisms or functors commonly encountered in functional programming. I hope in doing so I can be of benefit to you as well.
+Mathematical jargon is _in my opinion_ the biggest __hinderance__ to FP adoption. It's through phrases like _"A monad is just a monoid in category of endofunctors"_ that [real programmers](https://web.mit.edu/humor/Computers/real.programmers) keep the gates to all the good that functional programming has to offer. I'm writing this article to cement my own to understanding about the various key morphisms or functors commonly encountered in functional programming. I hope in doing so I can be of benefit to you as well.
 
 ### 0. Base Morphism
 Before jumping into the world of _endomorphism's_, _catamorphism's_, _functors_ and more. We need to understand what a regular old morphism is.

@@ -41,6 +41,16 @@ li {
     margin-bottom: 5px;
 }
 
+.blogBody a {
+    text-shadow: none;
+    color: #5398ff;
+    background-image: none;
+}
+
+.blogBody a:hover {
+    color: #7aaffd;
+}
+
 blockquote {
     border-left: 5px #ffb7b7 solid;
 }
