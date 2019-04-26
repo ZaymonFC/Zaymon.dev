@@ -7,6 +7,8 @@ description: Exploring the world of Morphisms and Functors.
 
 > This article is currently in draft form and will be subject to change over the coming __time units__.
 
+> I am still in the __research phase__ and I have made my __best efforts__ to provide information that is correct, however, there will __likely be small mistakes__ or __inaccuracies__.
+
 Mathematical jargon is _in my opinion_ the biggest __hinderance__ to FP adoption. It's through phrases like _"A monad is just a monoid in category of endofunctors"_ that __real programmers__ keep the gates to all the good that functional programming has to offer. I'm writing this article to cement my own to understanding about the various key morphisms or functors commonly encountered in functional programming. I hope in doing so I can be of benefit to you as well.
 
 ### 0. Base Morphism
@@ -32,7 +34,7 @@ A morphism is a __function__ which takes a __thing__ of `Type A` and converts it
 Functors are just morphisms where the transformation is expressed as a function.
 
 ### 1. Homomorphism | Homofunctor
-A __homomorphism__ or is a morphism where the transformation __preserves__ the same __structure__. 
+A __homomorphism__ or is a morphism where the transformation __preserves__ the same __structure__.
 
 What is __mathematical structure__?
 A __structure__ in mathematics __isn't synonymous__ with what fields a type has. A structure is a more abstract concept and can denote a few different things. The main two sources of structure we programmers are concerned about are:
