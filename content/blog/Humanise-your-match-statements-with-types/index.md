@@ -65,21 +65,21 @@ Lets create a type for our complicated example. First what would you name each b
 The code the best represents this is naturally a discriminated union:
 ```fsharp
 let private DeletionActions =
-| Permitted
-| PermittedWithLogging
-| CannotDeleteAdminAsUser
-| NotPermitted
+  | Permitted
+  | PermittedWithLogging
+  | CannotDeleteAdminAsUser
+  | NotPermitted
 ```
 > It should be noted that this type `DeletionActions` should be __as specific__ as possible. Since there is no case for reuse and its visibility is private we really want to __tailor__ the type to the expression at hand.
 
 We can encode our match logic into a static constructor which is a member of the type `DeletionActions`.
 
 ```fsharp
-let private DeletionActions =
-| Permitted
-| PermittedWithLogging
-| CannotDeleteAdminAsUser
-| NotPermitted
+  let private DeletionActions =
+  | Permitted
+  | PermittedWithLogging
+  | CannotDeleteAdminAsUser
+  | NotPermitted
 with
   static member OfConditions currentUserType permissions user : DeletionActions =
     let canDeleteUsers = permissions |> List.contains CanDeleteUser
@@ -142,11 +142,13 @@ let handleDeleteUser
 In this case the active pattern's definition is the structure of the union we want to match on. The body of the active pattern is our matching logic. The active pattern takes a tuple of parameters, very similar to how our types static member took the three parameters. The active pattern's usage is _inferred_ in the `handleDeleteUser` function based on the tuple of parameters which match the pattern and the union cases we are matching on.
 
 #### Which approach is right for me?
-_It depends_. 
+_It depends_.
 
-I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_. I personally prefer `single use types` because the call to convert from the input parameters to the decision cases is more explicit, however, they are more boiler plate code in comparison to `active patterns`.
+I see _pros_ and _cons_ in both approaches. From a _correctness_ point of view they are both __perfectly valid__. They both __humanise__ and __encapsulate__ the match logic. It comes down to a matter of _personal taste_.
 
-After further experimentation and use over the next few months I will revisit this article and pick my favourite.
+~~I personally prefer `single use types` because the call to convert from the input parameters to the decision cases is more explicit, however, they are more boiler plate code in comparison to `active patterns`.~~
+
+**Update July 2019:** Although I think `active patterns` incur a little more mental overhead at first, I believe that they are the superior choice for representing single use types. The savings in syntax combined with the amount composability and payload carrying properties make `active patterns` my current choice in the production software I work on.
 
 #### The Wrap
 So far in my experience coming into a codebase with many long functions where match logic is often spread out, condensing multivariable match logic into `single use types` or `active patterns` is a very effective way to __reduce the time required__ to understand the rules at play.
