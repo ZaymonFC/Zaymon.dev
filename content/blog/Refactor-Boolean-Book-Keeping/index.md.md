@@ -110,7 +110,7 @@ let toState (x: InvitationRecord) =
     | _, _, _, true -> "Completed" // highlight-line
 ```
 
-I know that no matter what values are in the other columns if InvitationComplete is true in isolation then the Invitation has been completed.
+I know that no matter what values are in the other columns if `SignupComplete` is `true` in isolation then the Invitation has been completed.
 The compiler is still yelling at me that I haven't matched all cases so let's encode the case where we need to send the initial invitation: `InvitationSent = False AND Withdrawn = False`
 
 ```fsharp
