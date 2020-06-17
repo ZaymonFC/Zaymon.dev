@@ -158,7 +158,7 @@ let toState (x: InvitationRecord) =
 ```
 
 
-Now the compiler is satisfied and we have reduced 16 combinations down to a reasonable 5!. There's still some more we can do though, since `Awaiting Invitation Sending` and `Awaiting Re-Sending` are the same logical action we can condense them!
+Now the compiler is satisfied and we have reduced 16 combinations down to a reasonable 5! There's still some more we can do though, since `Awaiting Invitation Sending` and `Awaiting Re-Sending` are the same logical action we can condense them!
 
 ```fsharp
 let toState (x: InvitationRecord) =
