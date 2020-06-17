@@ -84,6 +84,8 @@ type InvitationRecord =
 
 Now this is getting ridiculous. It's too hard to know what states are valid at different times. This is what I refer to as __boolean book keeping__.
 
+## The Answer
+
 So how can we simplify this? Here's where the compiler and F# come in. Currently we are operating on a combination of 4 boolean variables.
 That means there are `2^n where n is 4` `2^4 = 16` possible combinations of these boolean variables!
 
