@@ -110,7 +110,8 @@ let toState (x: InvitationRecord) =
     | _, _, _, true -> "Completed" // highlight-line
 ```
 
-I know that no matter what values are in the other columns if `SignupComplete` is `true` in isolation then the Invitation has been completed.
+I know that no matter what values are in the other columns if `SignupComplete` is `true` in isolation then the process is complete.
+
 The compiler is still yelling at me that I haven't matched all cases so let's encode the case where we need to send the initial invitation: `InvitationSent = False AND Withdrawn = False`
 
 ```fsharp
@@ -120,7 +121,7 @@ let toState (x: InvitationRecord) =
     | false, false, _, _ -> "Awaiting Invitation Sending" // highlight-line
 ```
 
-Now let's encode the case where the invitation has been __withdrawn__. We know logically that if the invitation has been __withdrawn__ then the invitation is will not be __complete__:
+Now let's encode the case where the invitation has been __withdrawn__. We know logically that if the invitation has been __withdrawn__ then the invitation will not be __complete__:
 
 ```fsharp
 let toState (x: InvitationRecord) =
@@ -156,7 +157,6 @@ let toState (x: InvitationRecord) =
     | _, false, true, _ -> "Awaiting Re-Sending"
     | true, false, false, _ -> "Invitation Sent" // highlight-line
 ```
-
 
 Now the compiler is satisfied and we have reduced 16 combinations down to a reasonable 5! There's still some more we can do though, since `Awaiting Invitation Sending` and `Awaiting Re-Sending` are the same logical action we can condense them!
 
