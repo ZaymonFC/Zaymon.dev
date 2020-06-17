@@ -2,6 +2,7 @@
 title: Refactoring Boolean Book Keeping with the Help of F#
 date: "2020-06-17 15:04:29"
 author: Zaymon Foulds-Cook
+description: Stop the mental gymnastics of boolean state management
 ---
 
 ## The Problem
