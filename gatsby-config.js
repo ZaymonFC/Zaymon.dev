@@ -5,7 +5,7 @@ module.exports = {
     description: `Personal Blog`,
     siteUrl: `https://0xZafc.net/`,
     social: {
-      twitter: `ZedamonTheWise`,
+      twitter: `ZaymonTheUnwise`,
     },
   },
   plugins: [
