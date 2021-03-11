@@ -1,5 +1,6 @@
 ---
 title: Introduction to Morphisms and Functors
+published: false
 date: "2019-04-23T10:00:00+1000"
 author: Zaymon Foulds-Cook
 description: Exploring the world of Morphisms and Functors.
